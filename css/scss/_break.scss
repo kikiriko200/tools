@@ -1,0 +1,19 @@
+$pc: 1366px; // PC 
+$tb-max: 1365px;
+$tb-min: 769px;//タブレット
+$sp: 768px;  // スマホ
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tb {
+  @media screen and (min-width:($tb-min))and(max-width: ($tb-max)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}

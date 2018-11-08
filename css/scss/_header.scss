@@ -1,0 +1,39 @@
+.header{
+  background:#aaa;
+}
+.header-inner{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  &::-webkit-scrollbar{
+    display: none;
+    @include sp{
+      display: block;
+    }
+  }
+  .logo{
+    width: 100%;
+  }
+}
+.g-nav{
+  margin: auto 0;
+  position: sticky;
+  top:0;
+  z-index: 2;
+  background: #111;
+  color: #fff;
+  .nav-list{
+    display: flex;
+    overflow-x: auto;
+    .nav-content{
+      padding: 15px;
+      word-break: keep-all;
+      list-style: none;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

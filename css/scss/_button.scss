@@ -1,0 +1,17 @@
+.morebtn{
+  width: fit-content;
+  margin: auto;
+  font-size: 24px;
+}
+.btn{
+background: transparent;
+border: 3px solid black;
+padding: 15px 30px;
+color: black;
+font-weight: 700;
+  &:hover{
+    background: black;
+    color: white;
+    transition: .3s;
+  }
+}
