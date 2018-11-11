@@ -16,12 +16,15 @@
             </div>
           </div>
         </a>
-        <div class="col box">
-          <div class="box-content">
-            <div class="box-content-title">Title</div>
-            <div class="box-content-img"></div>
+        <a href="./pages/ip.php" class="col">
+          <div class="box">
+            <div class="box-content">
+              <div class="box-content-title">IPアドレス確認</div>
+              <div class="box-content-img">No img</div>
+              <p class="box-content-text">ブラウザの認識するIPアドレスを  確認出来ます</p>
+            </div>
           </div>
-        </div>
+        </a>
         <div class="col box">
           <div class="box-content">
             <div class="box-content-title">Title</div>

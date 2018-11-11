@@ -19,6 +19,11 @@ code{
 		<div class="box">
 			<div class="box-content">
 				<h2>curlジェネレーター</h2>
+				<noscript>
+					<div class="infobox alert">
+						<p>このツールを利用するにはJavaScriptを有効化してください。</p>
+					</div>
+				</noscript>
 				<h3>URL</h3>
 				<input type="text" placeholder="http(s)://" pattern="^(https?://[\w/:%#\$&\?\(\)~\.=\+\-]*|https?:/|https?:|https?|htt|ht|h)" maxlength="100" :value="urls" @input="urls=opt(urls,$event)">
 				<h3>オプション</h3>
@@ -34,6 +39,7 @@ code{
 </div>
 <?php include '../temp/footer.php' ?>
 <?php include '../temp/js.php' ?>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
 <script async defer src="../js/tools/vue-curl.js"></script>
 </body>
 </html>
