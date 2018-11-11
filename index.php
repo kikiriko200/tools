@@ -11,7 +11,7 @@
           <div class="box">
             <div class="box-content">
               <div class="box-content-title">curlコマンドジェネレーター</div>
-              <div class="box-content-img"><img src="https://curl.haxx.se/logo/curl-logo.svg"></div>
+              <div class="box-content-img"><img src="./img/curl-logo.svg"></div>
               <p class="box-content-text">ファイルをDLするときなどに使うcurlコマンドを生成できます。</p>
             </div>
           </div>
