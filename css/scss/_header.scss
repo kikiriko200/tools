@@ -14,6 +14,12 @@
   }
   .logo{
     width: 100%;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #fff;
+  }
+  @include sp{
+    width: 100%;
   }
 }
 .g-nav{
@@ -23,16 +29,22 @@
   z-index: 2;
   background: #111;
   color: #fff;
-  .nav-list{
-    display: flex;
-    overflow-x: auto;
-    .nav-content{
-      padding: 15px;
-      word-break: keep-all;
-      list-style: none;
-      a{
-        color: #fff;
-        text-decoration: none;
+  .inner{
+    background: darkslategray;
+    .nav-list{
+      display: flex;
+      overflow-x: auto;
+      .nav-content{
+        padding: 15px;
+        word-break: keep-all;
+        list-style: none;
+        &:hover{
+          background: rgba(70,130,180,1);
+        }
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
   }

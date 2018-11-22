@@ -5,13 +5,17 @@
 			<h1>DAFU's tools</h1>
 		</div>
 		<div class="inner contents-inner">
+      <h2 class="md">更新情報</h2>
+      <div class="alert info">
+        <p>更新情報:IPアドレス確認・文字数チェッカーを追加しました(18/11/15)</p>    
+      </div>
 			<h2 class="md">ツール一覧</h2>
 			<div class="r">
         <a href="./pages/curl.php" class="col">
           <div class="box">
             <div class="box-content">
               <div class="box-content-title">curlコマンドジェネレーター</div>
-              <div class="box-content-img"><img src="./img/curl-logo.svg"></div>
+              <div class="box-content-img"><img src="./img/curl-logo.svg" alt="curlコマンドジェネレーター"></div>
               <p class="box-content-text">ファイルをDLするときなどに使うcurlコマンドを生成できます。</p>
             </div>
           </div>
@@ -20,17 +24,20 @@
           <div class="box">
             <div class="box-content">
               <div class="box-content-title">IPアドレス確認</div>
-              <div class="box-content-img">No img</div>
-              <p class="box-content-text">ブラウザの認識するIPアドレスを  確認出来ます</p>
+              <div class="box-content-img"><img src="./img/network.jpg" alt="IPアドレス確認"></div>
+              <p class="box-content-text">ブラウザの認識するIPアドレスやプロバイダ・使用中のブラウザなどを確認出来ます。</p>
             </div>
           </div>
         </a>
-        <div class="col box">
-          <div class="box-content">
-            <div class="box-content-title">Title</div>
-            <div class="box-content-img"></div>
+        <a href="./pages/count.php" class="col">
+          <div class="box">
+            <div class="box-content">
+              <div class="box-content-title">文字数チェッカー</div>
+              <div class="box-content-img">No img</div>
+              <p class="box-content-text">文章の文字数を確認出来ます。</p>
+            </div>
           </div>
-        </div>
+        </a>
         <div class="col box">
           <div class="box-content">
             <div class="box-content-title">Title</div>

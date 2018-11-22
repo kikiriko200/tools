@@ -1,10 +1,23 @@
 .footer{
   width: 100%;
   background: #777;
+  background-position: bottom;
   color: #fff;
   .footer-inner{
     width: 90%;
     margin: 0 auto;
+    details{
+      border-radius: 0;
+      border-color: white;
+      background: #333;
+      li{
+        list-style: decimal-leading-zero;
+        a{
+          color:#fff;
+          text-decoration: none;
+        }
+      }
+    }
   }
   .copy{
     background: #111;

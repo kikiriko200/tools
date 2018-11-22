@@ -1,4 +1,5 @@
 <?php include '../temp/header.php' ?>
+<title>curlジェネレーター|<?php echo $sitename;?></title>
 <?php include '../temp/nav.php' ?>
 <style>
 input[type=text] {
@@ -6,8 +7,8 @@ input[type=text] {
   padding: 5px;
   font-size: 18px;
 }
-code{
-	background: #f5f5f5;
+.curl{
+	background: rgb(245,245,245);
 	border:solid 1px;
 	border-radius: 5px;
 	font-size: 16px;
@@ -16,6 +17,7 @@ code{
 </style>
 <div id="app" class="contents" style="min-height:90vh">
 	<div class="inner contents-inner">
+		<?php include '../temp/ad.php'?>
 		<div class="box">
 			<div class="box-content">
 				<h2>curlジェネレーター</h2>
@@ -27,12 +29,19 @@ code{
 				<h3>URL</h3>
 				<input type="text" placeholder="http(s)://" pattern="^(https?://[\w/:%#\$&\?\(\)~\.=\+\-]*|https?:/|https?:|https?|htt|ht|h)" maxlength="100" :value="urls" @input="urls=opt(urls,$event)">
 				<h3>オプション</h3>
-				<input type="checkbox" v-model="o" true-value="-o" false-value="">ファイルをダウンロードする<br>
-				<input type="checkbox" v-model="c" true-value="-C-" false-value="">中断地点から再開する
+				<input type="checkbox" v-model="o" true-value="-O" false-value="">ファイルをダウンロードする(ファイル名:自動)<br>
+				<input type="checkbox" v-model="c" true-value="-C-" false-value="">中断地点から再開する<br>
+				<input type="checkbox" v-model="l" true-value="-L" false-value="">リダイレクトも追う<br>
+				<input type="checkbox" v-model="sS" true-value="-sS" false-value="">進捗表示なし(エラーは表示)<br>
 				<p>
-					コマンド:<code id="code">curl {{o}} {{c}} {{urls}}</code><br>
+					コマンド:<code id="code" class="curl">curl {{o}} {{c}} {{l}} {{sS}} {{urls}}</code><br>
 				</p>
 				<button class="btn" onclick="copyToClipboard('#code')" style="margin-top:15px">コピーする</button>
+				<?php include('../temp/share.php') ?>
+				<details>
+					<summary>ソースコード</summary>
+					<pre><code><?php highlight_file("curl.php");?></code></pre>
+				</details>
 			</div>
 		</div>
 	</div>

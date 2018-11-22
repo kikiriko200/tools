@@ -1,4 +1,5 @@
 <?php
+	include '../temp/header.php';
 	$ipv4 = $_SERVER["REMOTE_ADDR"];
 	$ua = $_SERVER['HTTP_USER_AGENT'];
 	$isp = gethostbyaddr($ipv4);
@@ -7,14 +8,15 @@
 	$json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 	$geoip = json_decode($json,true);
 ?>
-<?php include '../temp/header.php' ?>
 <link rel="preload" as="style" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin="anonymous"
 	 onload="this.rel='stylesheet'">
+<title>ipアドレス確認|<?php echo $sitename;?></title>
 <?php include '../temp/nav.php' ?>
-<div id="app" class="contents" style="min-height:90vh">
+<div id="app" class="contents">
 	<div class="inner contents-inner">
+		<?php include '../temp/ad.php'?>
 		<div class="box">
 			<div class="box-content">
 				<div class="alert info">
@@ -23,6 +25,19 @@
 				<h2>ipアドレス確認</h2>
 				<h3>あなたのIPv4アドレス:<?php echo $ipv4; ?></h3>
         <h3>ユーザーエージェント:<?php echo $ua; ?></h3>
+				<h3>あなたが使用しているブラウザ:
+					<?php
+						if(strpos($ua,'Edge') !== false){
+							echo 'MicroSoft Edge';
+						}elseif(strpos($ua,'Chrome') !== false){
+							echo 'Google Chrome';
+						}elseif(strpos($ua,'Firefox') !== false){
+							echo 'Firefox';
+						}elseif(strpos($ua,'OPR') !== false){
+							echo 'Opera';
+						};
+					?>
+				</h3>
 				<h3>プロバイダ:<?php echo $isp; ?></h3>
 				<h3>国:<?php echo $geoip["country_name"]; ?></h3>
 				<h3>時差:UTF+<?php echo $geoip["gmt"]; ?>時間</h3>
@@ -50,18 +65,11 @@
 				?>
 				</h3>
 				<div id="map"></div>
-				<h3>あなたが使用しているブラウザ:
-				<?php
-					if(strpos($ua,'Edge') !== false){
-						echo 'MicroSoft Edge';
-					}elseif(strpos($ua,'Chrome') !== false){
-						echo 'Google Chrome';
-					}elseif(strpos($ua,'Firefox') !== false){
-						echo 'Firefox';
-					}elseif(strpos($ua,'OPR') !== false){
-						echo 'Opera';
-					};
-				?></h3>
+				<?php include '../temp/share.php' ?>
+				<details>
+					<summary>ソースコード</summary>
+					<pre><code><?php highlight_file("ip.php");?></code></pre>
+				</details>
       </div>
 		</div>
 	</div>

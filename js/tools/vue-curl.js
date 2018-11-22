@@ -3,7 +3,9 @@ new Vue({
   data: {
       urls: '',
       o: '',
-      c: ''
+      c: '',
+      l: '',
+      sS: ''
   },
   methods: {
       opt: function(oldVal, e) {

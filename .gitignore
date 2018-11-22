@@ -1,0 +1,7 @@
+*.txt
+*.zip
+*.html
+*.json
+*.jpg
+/api
+/icomoon

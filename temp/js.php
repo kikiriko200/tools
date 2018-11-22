@@ -1,2 +1,5 @@
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+<script defer src="/tools/js/plugins/jquery.v3-3-1.min.js"></script>
+<link rel="stylesheet"
+      href="/tools/css/highlight/styles/tomorrow-night.css">
+<script src="/tools/js/tools/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>

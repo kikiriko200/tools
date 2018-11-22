@@ -1,8 +1,20 @@
+@keyframes Gradient {
+  0% {
+      background-position: 0% 50%
+  }
+  50% {
+      background-position: 100% 50%
+  }
+  100% {
+      background-position: 0% 50%
+  }
+}
 .contents{
   background: #eaeded;
 }
 .contents-hero{
-  background: linear-gradient(-45deg, rgba(238, 238, 238, 1), rgba(25, 181, 254, 1));
+  animation: Gradient 5s ease infinite;
+  background: linear-gradient(-45deg, #0D0E0E, #AFB8B8);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -29,7 +41,26 @@
     width: 95%;
   }
 }
+.ad{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+  max-height: 300px;
+  background-color: #ECECEC;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 7px 7px;
+  p{
+    text-align: center;
+  }
+}
 #map{
   height: 300px;
   width: 300px;
+  z-index: 1;
+}
+details{
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px;
 }
